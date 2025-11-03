@@ -73,7 +73,7 @@ function doPost(e) {
         'Description',
         'Quantity',
         'Preferred Vendor',
-        'Estimated Cost',
+        'Estimated Budget',
         'Priority',
         'Required Date',
         'Stage'  // Added Stage column

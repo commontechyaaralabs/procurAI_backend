@@ -1289,7 +1289,7 @@ export default function ProcurementDetail() {
                             <p className="text-base font-semibold text-gray-900">{submission.quantity}</p>
                           </div>
                           <div>
-                            <p className="text-sm font-medium text-gray-600 mb-1">Estimated Cost:</p>
+                            <p className="text-sm font-medium text-gray-600 mb-1">Estimated Budget:</p>
                             <p className="text-base font-semibold text-gray-900">₹{parseFloat(submission.estimatedCost).toLocaleString('en-IN')}</p>
                           </div>
                           <div>

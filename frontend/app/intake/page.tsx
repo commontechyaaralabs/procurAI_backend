@@ -710,11 +710,11 @@ export default function IntakeForm() {
                 </div>
               </div>
 
-              {/* Estimated Cost and Priority */}
+              {/* Estimated Budget and Priority */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="estimatedCost" className="block text-sm font-medium text-gray-700 mb-2">
-                    Estimated Cost <span className="text-red-500">*</span>
+                    Estimated Budget <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="number"
@@ -726,7 +726,7 @@ export default function IntakeForm() {
                     value={formData.estimatedCost}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900"
-                    placeholder="0.00"
+                    placeholder="Enter your budget here"
                   />
                 </div>
 

@@ -71,7 +71,7 @@ function doPost(e) {
       'Description',
       'Quantity',
       'Preferred Vendor',
-      'Estimated Cost',
+      'Estimated Budget',
       'Priority',
       'Required Date',
       'Stage'
@@ -396,7 +396,7 @@ function buildApprovalEmailHtml(requestId, data, scriptUrl) {
   html += '<tr><td>Description:</td><td>' + (data.description || 'N/A') + '</td></tr>';
   html += '<tr><td>Quantity:</td><td>' + (data.quantity || 'N/A') + '</td></tr>';
   html += '<tr><td>Preferred Vendor:</td><td>' + (data.preferredVendor || 'Not specified') + '</td></tr>';
-  html += '<tr><td>Estimated Cost:</td><td><strong>$' + (parseFloat(data.estimatedCost || 0).toLocaleString()) + '</strong></td></tr>';
+  html += '<tr><td>Estimated Budget:</td><td><strong>$' + (parseFloat(data.estimatedCost || 0).toLocaleString()) + '</strong></td></tr>';
   
   var priorityClass = 'priority-low';
   if (data.priority === 'urgent') priorityClass = 'priority-urgent';
@@ -865,7 +865,7 @@ function handleSendQuoteRequests(data) {
       })).setMimeType(ContentService.MimeType.JSON);
     }
     
-    // Get request data (columns: Timestamp, Customer ID, Request ID, Name, Email, Department, Cost Center, Class, Type, Item Name, Description, Quantity, Preferred Vendor, Estimated Cost, Priority, Required Date, Stage)
+    // Get request data (columns: Timestamp, Customer ID, Request ID, Name, Email, Department, Cost Center, Class, Type, Item Name, Description, Quantity, Preferred Vendor, Estimated Budget, Priority, Required Date, Stage)
     var requestData = {
       timestamp: sheet.getRange(requestRow, 1).getValue(),
       customerId: sheet.getRange(requestRow, 2).getValue(),
